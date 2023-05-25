@@ -1,0 +1,27 @@
+.header{
+    text-align: center;
+    color: #fff;
+    height: 64px;
+    background-color: #7dbcea;
+    .header-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .header-nav-item{
+            width: 80px;
+        }
+    }
+}
+.content{
+    color: #fff;
+    height: calc(100% - 84px);
+    background-color: #fff;
+
+}
+.footer{
+    text-align: center;
+    height: 20px;
+    background-color: #7dbcea;
+    padding: 0;
+}

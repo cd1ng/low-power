@@ -1,0 +1,93 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "35597082",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e6c0",
+      "unicode_decimal": 59072
+    },
+    {
+      "icon_id": "35597084",
+      "name": "订单明细",
+      "font_class": "dingdanmingxi",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "35597087",
+      "name": "面板文件",
+      "font_class": "mianbanwenjian",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "35597088",
+      "name": "收支明细",
+      "font_class": "shouzhimingxi",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "35597089",
+      "name": "已拼版",
+      "font_class": "yipinban",
+      "unicode": "e6c4",
+      "unicode_decimal": 59076
+    },
+    {
+      "icon_id": "35597093",
+      "name": "员工管理",
+      "font_class": "yuangongguanli",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "35597095",
+      "name": "迷你字设置",
+      "font_class": "minizishezhi",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "35597124",
+      "name": "字库",
+      "font_class": "ziku",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "35597127",
+      "name": "雕刻文件",
+      "font_class": "diaokewenjian",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "35597131",
+      "name": "文件分类设置",
+      "font_class": "wenjianfenleishezhi",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "35597132",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "35597133",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    }
+  ]
+}
