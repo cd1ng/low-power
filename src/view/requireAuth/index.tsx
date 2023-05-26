@@ -24,14 +24,20 @@ export default function RequireAuth() {
       <Header className='header'>
         <div className='header-nav'>
           <Button className='header-nav-item' onClick={jumpToHome}>
-            Home
-            <i className='icon iconfont icon-mianbanwenjian'></i>
+            首页
+            <i className='icon iconfont icon-dingdanguanli'></i>
           </Button>
           <Button className='header-nav-item' onClick={jumpToLogin}>
-            Login
+            登录
+            <i className='icon iconfont icon-dingdanmingxi'></i>
           </Button>
           <Button className='header-nav-item' onClick={jumpToEditor}>
-            Editor
+            编辑
+            <i className='icon iconfont icon-mianbanwenjian'></i>
+          </Button>
+          <Button className='header-nav-item' onClick={jumpToHome}>
+            我的
+            <i className='icon iconfont icon-yuangongguanli'></i>
           </Button>
         </div>
       </Header>
