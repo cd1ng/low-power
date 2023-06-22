@@ -1,15 +1,21 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { Layout, Button } from 'antd'
 
 import Aside from 'src/components/aside'
 
 import './index.scss'
 
-const { Header, Content, Footer } = Layout
+const { Header, Content } = Layout
 
 export default function RequireAuth() {
   const navigate = useNavigate()
+  useEffect(() => {
+    if (!window.sessionStorage.getItem('username')) {
+      jumpToLogin()
+    }
+  }, [])
+
   const jumpToHome = () => {
     navigate('/home')
   }
@@ -18,6 +24,9 @@ export default function RequireAuth() {
   }
   const jumpToEditor = () => {
     navigate('/editor')
+  }
+  const jumpToProject = () => {
+    navigate('/project')
   }
   return (
     <>
@@ -39,12 +48,18 @@ export default function RequireAuth() {
             我的
             <i className='icon iconfont icon-yuangongguanli'></i>
           </Button>
+          <Button className='header-nav-item' onClick={jumpToProject}>
+            项目
+            <i className='icon iconfont icon-yuangongguanli'></i>
+          </Button>
         </div>
       </Header>
       <Content className='content'>
         <Aside />
+        <div className='content-info'>
+          <Outlet />
+        </div>
       </Content>
-      <Footer className='footer'></Footer>
     </>
   )
 }

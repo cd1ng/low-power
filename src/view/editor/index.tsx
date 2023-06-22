@@ -1,5 +1,10 @@
-import React from 'react'
-
+import React, { useRef } from 'react'
+import './index.scss'
 export default function Editor() {
-  return <div>Editor</div>
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  return (
+    <>
+      <canvas className='edit-canvas' ref={canvasRef} />
+    </>
+  )
 }

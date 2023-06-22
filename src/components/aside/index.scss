@@ -1,20 +1,26 @@
-.aside{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow:0 0 2px #666 ;
-    .aside-item{
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        color: #666;
-        margin-top: 20px;
-        &:hover{
-            box-shadow: 0 0 1px #666;
-            cursor: pointer;
-        }
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 2px #666;
+  .aside_item {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    &:hover {
+      box-shadow: 0 0 1px #666;
+      cursor: pointer;
     }
+  }
+  .collapse {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
 }

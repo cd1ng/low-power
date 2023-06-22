@@ -1,9 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Home from './view/home'
-import Login from './view/login'
-import Editor from './view/editor'
-import RequireAuth from './view/requireAuth'
+import { Home, Login, Editor, RequireAuth, Project } from './view'
 
 function App() {
   return (
@@ -11,9 +8,10 @@ function App() {
       <Routes>
         <Route path='/' element={<RequireAuth />}>
           <Route path='/home' element={<Home />} />
-          <Route path='/login' element={<Login />} />
           <Route path='/editor' element={<Editor />} />
+          <Route path='/project' element={<Project />} />
         </Route>
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
