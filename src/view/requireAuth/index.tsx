@@ -56,7 +56,7 @@ export default function RequireAuth() {
       </Header>
       <Content className='content'>
         <Aside />
-        <div className='content-info'>
+        <div className='content-info' id='center'>
           <Outlet />
         </div>
       </Content>
