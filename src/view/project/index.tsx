@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectTable from 'src/components/table'
 import type { DataType } from 'src/components/table'
 
-import './index.scss'
+import styles from './index.module.less'
 
 const data: DataType[] = [
   {
@@ -33,7 +33,7 @@ const data: DataType[] = [
 
 export default function Project() {
   return (
-    <div className='tabel_page'>
+    <div className={styles.tabel_page}>
       <ProjectTable data={data} />
     </div>
   )

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Layout, Button } from 'antd'
 
-import Aside from 'src/components/aside'
-
-import './index.scss'
+import styles from './index.module.less'
 
 const { Header, Content } = Layout
 
@@ -16,9 +14,6 @@ export default function RequireAuth() {
     }
   }, [])
 
-  const jumpToHome = () => {
-    navigate('/home')
-  }
   const jumpToLogin = () => {
     navigate('/login')
   }
@@ -30,35 +25,28 @@ export default function RequireAuth() {
   }
   return (
     <>
-      <Header className='header'>
-        <div className='header-nav'>
-          <Button className='header-nav-item' onClick={jumpToHome}>
-            首页
-            <i className='icon iconfont icon-dingdanguanli'></i>
-          </Button>
-          <Button className='header-nav-item' onClick={jumpToLogin}>
+      <Header className={styles.header}>
+        <div className={styles.header_nav}>
+          <Button className={styles.header_nav_item} onClick={jumpToLogin}>
             登录
             <i className='icon iconfont icon-dingdanmingxi'></i>
           </Button>
-          <Button className='header-nav-item' onClick={jumpToEditor}>
+          <Button className={styles.header_nav_item} onClick={jumpToEditor}>
             编辑
             <i className='icon iconfont icon-mianbanwenjian'></i>
           </Button>
-          <Button className='header-nav-item' onClick={jumpToHome}>
+          <Button className={styles.header_nav_item} onClick={jumpToProject}>
             我的
             <i className='icon iconfont icon-yuangongguanli'></i>
           </Button>
-          <Button className='header-nav-item' onClick={jumpToProject}>
+          <Button className={styles.header_nav_item} onClick={jumpToProject}>
             项目
             <i className='icon iconfont icon-yuangongguanli'></i>
           </Button>
         </div>
       </Header>
-      <Content className='content'>
-        <Aside />
-        <div className='content-info' id='center'>
-          <Outlet />
-        </div>
+      <Content className={styles.content}>
+        <Outlet />
       </Content>
     </>
   )

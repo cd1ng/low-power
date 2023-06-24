@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo } from 'react'
 
-import Card from '../card'
+import Card from '../../../components/card'
 import {
   ASIDE_CLOSE,
   ASIDE_IMAGE_TYPE,
@@ -9,7 +9,7 @@ import {
   ASIDE_TEXT_TYPE,
 } from 'src/constants/left-aside'
 
-import './index.scss'
+import styles from './index.module.less'
 
 type asideType =
   | typeof ASIDE_MODAL_TYPE
@@ -30,7 +30,7 @@ const cardInfo = [
   { title: '标题', content: '标题' },
 ]
 
-export default function Aside() {
+const LeftAside = memo(() => {
   const [showSide, setShowSide] = useState(ASIDE_CLOSE)
 
   const handleClick = (type: asideType) => {
@@ -47,11 +47,14 @@ export default function Aside() {
   }, [])
 
   return (
-    <div className='aside'>
+    <div className={styles.left_aside}>
       {asideData.map((item, index) => {
         let nameStr = `icon iconfont icon-${item.icon}`
         return (
-          <div className='aside_item' key={index} onClick={() => handleClick(item.type)}>
+          <div
+            className={styles.left_aside_item}
+            key={index}
+            onClick={() => handleClick(item.type)}>
             <i className={nameStr}></i>
             <p>{item.label}</p>
           </div>
@@ -59,13 +62,14 @@ export default function Aside() {
       })}
       {/* 侧边栏的选项 */}
       {showSide && (
-        <div className='collapse'>
+        <div className={styles.collapse}>
           {cardInfo.map((item, index) => {
-            console.log(item)
             return <Card title={item.title} content={item.content} key={index} />
           })}
         </div>
       )}
     </div>
   )
-}
+})
+
+export default LeftAside
