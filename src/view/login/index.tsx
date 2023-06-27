@@ -9,7 +9,7 @@ export default function Login() {
     console.log('Success:', values)
     if (values?.username) {
       window.sessionStorage.setItem('username', values.username)
-      navigate('/home')
+      navigate('/')
     }
   }
 

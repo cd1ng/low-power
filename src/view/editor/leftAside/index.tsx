@@ -1,6 +1,10 @@
 import React, { useEffect, useState, memo } from 'react'
 
-import Card from '../../../components/card'
+import Card from 'src/components/card'
+import ImageSider from './ImageSider'
+import ShapeSider from './ShapeSider'
+import TextSider from './TextSider'
+import ModalSider from './ModalSider'
 import {
   ASIDE_CLOSE,
   ASIDE_IMAGE_TYPE,
@@ -47,28 +51,34 @@ const LeftAside = memo(() => {
   }, [])
 
   return (
-    <div className={styles.left_aside}>
-      {asideData.map((item, index) => {
-        let nameStr = `icon iconfont icon-${item.icon}`
-        return (
-          <div
-            className={styles.left_aside_item}
-            key={index}
-            onClick={() => handleClick(item.type)}>
-            <i className={nameStr}></i>
-            <p>{item.label}</p>
-          </div>
-        )
-      })}
-      {/* 侧边栏的选项 */}
-      {showSide && (
+    <>
+      <div className={styles.left_aside}>
+        {asideData.map((item, index) => {
+          let nameStr = `icon iconfont icon-${item.icon}`
+          return (
+            <div
+              className={styles.left_aside_item}
+              key={index}
+              onClick={() => handleClick(item.type)}>
+              <i className={nameStr}></i>
+              <p>{item.label}</p>
+            </div>
+          )
+        })}
+        {/* 侧边栏的选项 */}
+        {/* {showSide && (
         <div className={styles.collapse}>
           {cardInfo.map((item, index) => {
             return <Card title={item.title} content={item.content} key={index} />
           })}
         </div>
-      )}
-    </div>
+      )} */}
+      </div>
+      {showSide === ASIDE_MODAL_TYPE && <ModalSider />}
+      {showSide === ASIDE_TEXT_TYPE && <TextSider />}
+      {showSide === ASIDE_IMAGE_TYPE && <ImageSider />}
+      {showSide === ASIDE_SHAPE_TYPE && <ShapeSider />}
+    </>
   )
 })
 

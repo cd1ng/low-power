@@ -1,5 +1,5 @@
 import React, { DragEventHandler } from 'react'
-import './index.scss'
+import './index.less'
 
 interface CardProps {
   title: string
